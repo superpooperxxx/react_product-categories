@@ -2,46 +2,46 @@ export default [
   {
     id: 1,
     name: 'Milk',
-    groupId: 4,
+    categoryId: 2,
   },
   {
     id: 2,
     name: 'Bread',
-    groupId: 4,
+    categoryId: 1,
   },
   {
     id: 3,
     name: 'Eggs',
-    groupId: 4,
+    categoryId: 1,
   },
   {
     id: 4,
-    name: 'Cheese',
-    groupId: 5,
+    name: 'Jacket',
+    categoryId: 5,
   },
   {
     id: 5,
     name: 'Sugar',
-    groupId: 3,
+    categoryId: 1,
   },
   {
     id: 6,
     name: 'Banana',
-    groupId: 1,
+    categoryId: 3,
   },
   {
     id: 7,
     name: 'Beer',
-    groupId: 1,
+    categoryId: 2,
   },
   {
     id: 8,
-    name: 'Coffee',
-    groupId: 3,
+    name: 'Socks',
+    categoryId: 5,
   },
   {
     id: 9,
-    name: 'Cake',
-    groupId: 1,
+    name: 'Apples',
+    categoryId: 3,
   },
 ];

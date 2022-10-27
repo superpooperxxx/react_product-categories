@@ -10,11 +10,12 @@ export const App: React.FC = () => (
     <div className="ui card">
       <div className="ui content">
         <div className="ui description">
-          <p>Always - (Roma)</p>
+          <p>Grocery - (Anna)</p>
+          
           <ul className="ui list">
-            <li>Banana</li>
-            <li>Beer</li>
-            <li>Cake</li>
+            <li>Bread</li>
+            <li>Eggs</li>
+            <li>Sugar</li>
           </ul>
         </div>
       </div>
@@ -23,8 +24,8 @@ export const App: React.FC = () => (
     <div className="ui card">
       <div className="ui content">
         <div className="ui description">
-          <p>Never - (Anna)</p>
-          <b>No tasks</b>
+          <p>Electronics - (Roma)</p>
+          <b>No products</b>
         </div>
       </div>
     </div>
