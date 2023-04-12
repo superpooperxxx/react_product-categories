@@ -24,10 +24,9 @@ export const CategoryInfo: FC<Props> = ({
 
           {products.length > 0
             ? (<ProductList products={products} />)
-            : (<b>No products</b>)
-          }
+            : (<b>No products</b>)}
         </div>
       </div>
     </div>
   );
-}
+};
