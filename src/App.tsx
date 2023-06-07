@@ -1,33 +1,19 @@
 import React from 'react';
 import './App.scss';
+import { categoriesFromServer } from './api/categories';
+import { usersFromServer } from './api/users';
+import { productsFromServer } from './api/products';
+import { CategoriesList } from './components/CategoriesList/CategoriesList';
+import { prepareCategories } from './helpers';
 
-// import usersFromServer from './api/users';
-// import productsFromServer from './api/products';
-// import categoriesFromServer from './api/categories';
+const categories = prepareCategories({
+  users: usersFromServer,
+  categories: categoriesFromServer,
+  products: productsFromServer,
+});
 
 export const App: React.FC = () => (
   <div className="container">
-    <div className="ui card">
-      <div className="ui content">
-        <div className="ui description">
-          <p>Grocery - (Anna)</p>
-          
-          <ul className="ui list">
-            <li>Bread</li>
-            <li>Eggs</li>
-            <li>Sugar</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div className="ui card">
-      <div className="ui content">
-        <div className="ui description">
-          <p>Electronics - (Roma)</p>
-          <b>No products</b>
-        </div>
-      </div>
-    </div>
+    <CategoriesList categories={categories} />
   </div>
 );
