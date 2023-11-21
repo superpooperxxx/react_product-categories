@@ -1,33 +1,25 @@
 import React from 'react';
 import './App.scss';
+import { categoriesFromServer } from './api/categories';
+import { usersFromServer } from './api/users';
+import { productsFromServer } from './api/products';
+import { Category } from './components/Category/Category.jsx';
 
-// import usersFromServer from './api/users';
-// import productsFromServer from './api/products';
-// import categoriesFromServer from './api/categories';
+const preparedCategories = categoriesFromServer.map(category => {
+  const owner = usersFromServer.find(user => user.id === category.ownerId);
+  const products = productsFromServer.filter(product => product.categoryId === category.id);
+
+  return {
+    ...category,
+    owner,
+    products,
+  };
+});
 
 export const App = () => (
   <div className="container">
-    <div className="ui card">
-      <div className="ui content">
-        <div className="ui description">
-          <p>Grocery - (Anna)</p>
-
-          <ul className="ui list">
-            <li>Bread</li>
-            <li>Eggs</li>
-            <li>Sugar</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div className="ui card">
-      <div className="ui content">
-        <div className="ui description">
-          <p>Electronics - (Roma)</p>
-          <b>No products</b>
-        </div>
-      </div>
-    </div>
+    {preparedCategories.map(category => (
+      <Category key={category.id} category={category} />
+    ))}
   </div>
 );
