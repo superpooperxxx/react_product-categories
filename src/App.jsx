@@ -1,33 +1,19 @@
 import React from 'react';
+import { CategoryCard } from './components/CategoryCard';
 import './App.scss';
+import { getPreparedCategories } from './api';
 
-// import usersFromServer from './api/users';
-// import productsFromServer from './api/products';
-// import categoriesFromServer from './api/categories';
+export const App = () => {
+  const categories = getPreparedCategories();
 
-export const App = () => (
-  <div className="container">
-    <div className="ui card">
-      <div className="ui content">
-        <div className="ui description">
-          <p>Grocery - (Anna)</p>
-
-          <ul className="ui list">
-            <li>Bread</li>
-            <li>Eggs</li>
-            <li>Sugar</li>
-          </ul>
-        </div>
-      </div>
+  return (
+    <div className="container">
+      {categories.map(category => (
+        <CategoryCard
+          key={category.id}
+          category={category}
+        />
+      ))}
     </div>
-
-    <div className="ui card">
-      <div className="ui content">
-        <div className="ui description">
-          <p>Electronics - (Roma)</p>
-          <b>No products</b>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+  );
+};
