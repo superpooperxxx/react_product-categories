@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.scss';
 
-import usersFromServer from './api/users';
-import productsFromServer from './api/products';
-import categoriesFromServer from './api/categories';
+// import usersFromServer from './api/users';
+// import productsFromServer from './api/products';
+// import categoriesFromServer from './api/categories';
 
 export const App = () => (
   <div className="container">
