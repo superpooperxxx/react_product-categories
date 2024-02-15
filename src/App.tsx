@@ -11,7 +11,7 @@ export const App: React.FC = () => (
       <div className="ui content">
         <div className="ui description">
           <p>Grocery - (Anna)</p>
-          
+
           <ul className="ui list">
             <li>Bread</li>
             <li>Eggs</li>
